@@ -3,7 +3,6 @@ require 'google/apis/drive_v3'
 require 'google/apis/sheets_v4'
 require 'pry'
 require 'mini_magick'
-require 'rmagick'
 
 ORIGINAL_FOLDER_ID='1U2Xmb078-icd-IH4pCWQc-sqW2jRMT9MYwDIJ681A9IfwS1y64QB8ArLXYHnnF0ArXhl7XwR'
 BACKUP_FOLDER_ID='1W3TY-qJ31THYQdxEi2Q5tjQ-wUCRtemE'
@@ -28,7 +27,7 @@ list_heif_files = drive_service.list_files(q: "mimeType = 'image/heif'")
 all_sheets = drive_service.list_files(q: 'mimeType = "application/vnd.google-apps.spreadsheet"')
 # and ID
 sheet_id = all_sheets.files.last.id
-range = "Form Import!F1:K50"
+range = "Form Import!F1:K100"
 main_sheet = sheets_service.get_spreadsheet(sheet_id, ranges: range, include_grid_data: true)
 
 # str = main_sheet.sheets.first.data.first.row_data[1].values[4].effective_value.string_value 
