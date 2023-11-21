@@ -8,7 +8,7 @@ ORIGINAL_FOLDER_ID='1U2Xmb078-icd-IH4pCWQc-sqW2jRMT9MYwDIJ681A9IfwS1y64QB8ArLXYH
 BACKUP_FOLDER_ID='1W3TY-qJ31THYQdxEi2Q5tjQ-wUCRtemE'
 CONVERTED_IDS_FILE_NAME = 'converted.db'
 SPREADSHEET_ID='1QbFMeV09e-rcJmoBax4445v3OGZ-38s6aju8zaM30-8'
-IMPORT_RANGE = "Form Import!F1:K50"
+IMPORT_RANGE = "Form Import!F1:K500"
 
 Drive = ::Google::Apis::DriveV3
 drive_service = Drive::DriveService.new
